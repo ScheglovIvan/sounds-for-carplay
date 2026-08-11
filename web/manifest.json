@@ -1,0 +1,12 @@
+{
+  "name": "Drivana",
+  "short_name": "Drivana",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "description": "Drive calmer — ambient sounds, gentle cues, trips and your safe-driving score.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": []
+}

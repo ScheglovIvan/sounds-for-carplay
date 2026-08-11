@@ -1,0 +1,98 @@
+[
+  {
+    "name": "AppButton",
+    "file": "app_button.dart",
+    "props": ["label", "onPressed", "variant", "icon", "trailingIcon", "expanded", "loading", "height"],
+    "when_to_use": "Every primary/secondary action. variant: gradient (primary CTA pill), white (Get Started / Continue / paywall Continue), outlined (design_tokens.button_style), ghost (secondary surface pill)."
+  },
+  {
+    "name": "AppProBadge",
+    "file": "app_pro_badge.dart",
+    "props": ["label", "onPressed", "icon", "compact"],
+    "when_to_use": "The GET PRO / Go Premium gradient badge. compact=true for a nav-bar action slot; default for banners. Tap opens a paywall."
+  },
+  {
+    "name": "AppBadge",
+    "file": "app_badge.dart",
+    "props": ["label", "tone", "icon"],
+    "when_to_use": "Small pill tag: discount (tone: accent, e.g. '89% OFF'), PRO/PREMIUM (tone: premium), FREE (tone: success/neutral), status labels."
+  },
+  {
+    "name": "AppCard",
+    "file": "app_card.dart",
+    "props": ["child", "onTap", "padding", "radius", "selected", "color", "gradient"],
+    "when_to_use": "Base surface container for any grouped block. selected=true adds a primary outline (paywall package cards, chosen options)."
+  },
+  {
+    "name": "AppTextField",
+    "file": "app_text_field.dart",
+    "props": ["controller", "hintText", "onChanged", "onSubmitted", "leadingIcon", "showClear", "onClear", "autofocus"],
+    "when_to_use": "Pill search field / generic text entry (sound-picker search, forms)."
+  },
+  {
+    "name": "AppChip / AppChipBar",
+    "file": "app_chip.dart",
+    "props": ["label", "selected", "onTap", "icon", "labels", "selectedIndex", "onSelected"],
+    "when_to_use": "Category filter chips (All, Trends, Gaming, Cinematic, Engine, Memes & Fun). AppChipBar renders a horizontal scrolling row bound to a selected index."
+  },
+  {
+    "name": "AppTopBar",
+    "file": "app_top_bar.dart",
+    "props": ["title", "titleWidget", "leading", "showBack", "onBack", "showMenu", "onMenu", "actions", "centerTitle", "backgroundColor"],
+    "when_to_use": "The nav bar for every screen. Supply showBack or showMenu for the leading control and actions (e.g. an AppProBadge). Implements PreferredSizeWidget."
+  },
+  {
+    "name": "AppBottomBar / AppBottomBarItem",
+    "file": "app_bottom_bar.dart",
+    "props": ["items", "currentIndex", "onTap", "icon", "activeIcon", "label"],
+    "when_to_use": "Low-level tab bar. Pass a list of AppBottomBarItem and the current index. For the app's four roots use AppMainTabBar instead."
+  },
+  {
+    "name": "AppMainTabBar / AppMainTab",
+    "file": "app_main_tabs.dart",
+    "props": ["current"],
+    "when_to_use": "The app's four bottom-tab roots (Drive / Trips / Sounds / Car). Every root screen passes its own AppMainTab; the bar owns the labels, icons and cross-tab navigation."
+  },
+  {
+    "name": "AppScaffold",
+    "file": "app_scaffold.dart",
+    "props": ["topBar", "body", "bottomBar", "background", "floatingActionButton", "safeTop", "safeBottom", "onboarding", "backgroundColor", "extendBodyBehindTopBar"],
+    "when_to_use": "Page shell for every screen: token background, optional AppTopBar/bottom bar, and a full-bleed background layer for splash/paywall hero media. onboarding=true paints the darker onboarding background."
+  },
+  {
+    "name": "AppListTile",
+    "file": "app_list_tile.dart",
+    "props": ["title", "subtitle", "leadingIcon", "leadingColor", "leading", "trailingText", "trailing", "showChevron", "onTap", "dense"],
+    "when_to_use": "Generic settings / menu / drawer row with a tinted leading icon, optional trailing value or widget, and a chevron."
+  },
+  {
+    "name": "AppSlotCard",
+    "file": "app_slot_card.dart",
+    "props": ["title", "icon", "glyphColor", "selectedSound", "emptyLabel", "onTap", "trailingIcon"],
+    "when_to_use": "The three cue slots on the Drive Sounds home (Departure / Arrival / Home). Shows the assigned sound name or an empty label."
+  },
+  {
+    "name": "AppSoundRow",
+    "file": "app_sound_row.dart",
+    "props": ["title", "subtitle", "selected", "playing", "premium", "locked", "onPlayToggle", "onTap"],
+    "when_to_use": "A row in the sound library / picker: play/pause preview, title + category, PRO tag, and a radio (or lock when premium & not entitled)."
+  },
+  {
+    "name": "AppSectionHeader",
+    "file": "app_section_header.dart",
+    "props": ["title", "actionLabel", "onAction", "padding"],
+    "when_to_use": "Titled section header above grouped lists / settings groups, with an optional trailing action ('See all')."
+  },
+  {
+    "name": "AppBanner",
+    "file": "app_banner.dart",
+    "props": ["message", "title", "icon", "tone", "onTap", "trailing"],
+    "when_to_use": "Inline notice banner. tone: warning (warning_bg/warning_text cream tip, e.g. 'not activated yet') or info (translucent primary)."
+  },
+  {
+    "name": "AppEmptyState",
+    "file": "app_empty_state.dart",
+    "props": ["icon", "title", "message", "actionLabel", "onAction"],
+    "when_to_use": "Centered zero-result / no-selection / error placeholder with a soft glyph, headline, message and optional CTA."
+  }
+]

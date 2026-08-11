@@ -1,0 +1,7 @@
+{
+  "NSLocationWhenInUseUsageDescription": "Drivana shows your real position on the live Focus Drive map and keeps local conditions up to date.",
+  "NSAppleMusicUsageDescription": "Drivana shows the track your iPhone is playing on the Focus Drive board and lets you pause or skip it.",
+  "NSUserTrackingUsageDescription": "Allow tracking so we can measure which ads bring people here and keep improving the app for you.",
+  "NSAdvertisingAttributionReportEndpoint": "https://tenjin-skan.com",
+  "ITSAppUsesNonExemptEncryption": false
+}

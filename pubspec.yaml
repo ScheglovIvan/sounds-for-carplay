@@ -1,0 +1,72 @@
+name: drivana
+description: Drivana — drive calmer with drive sounds, gentle cues, trips and your safe-driving score.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  google_fonts: ^6.2.1
+  shared_preferences: ^2.2.3
+  # Media playback for bundled backgrounds / sounds (used by screen tasks as needed).
+  video_player: ^2.9.1
+  lottie: ^3.1.2
+  audioplayers: ^6.1.0
+  # In-app purchases / subscriptions via Apphud (see apphud_config.json).
+  apphud: ^3.2.0
+  # Install/event attribution via Tenjin (see attribution_config.json).
+  # Measurement only — this app ships no ad SDK and no ad units.
+  tenjin_plugin: ^1.2.0
+  # Apple App Tracking Transparency prompt + IDFA (required before attribution).
+  app_tracking_transparency: ^2.0.4
+  # Real HTTPS requests for the VIN lookup (NHTSA vPIC; no API key).
+  http: ^1.2.0
+  # ── Real device / OS integrations (Focus Drive board + status bar) ──────────
+  # Native Apple MapKit map (no API key) for the live Focus Drive map.
+  apple_maps_flutter: ^1.3.0
+  # Real GPS position + the real iOS location permission dialog.
+  geolocator: ^12.0.0
+  permission_handler: ^11.3.1
+  # Live device readouts for the Focus Drive status bar.
+  battery_plus: ^6.0.0
+  connectivity_plus: ^6.0.5
+  # Launch real system apps (Apple Maps, Music, Phone…) from the drive grid.
+  url_launcher: ^6.3.0
+  # System share sheet for "Tell a friend" (Menu › Support).
+  share_plus: ^10.0.0
+  # Local plugin: SYSTEM now-playing metadata (title / artist / artwork /
+  # position) AND transport control of MPMusicPlayerController.systemMusicPlayer
+  # (no pub package exists; the `nowplaying` package trapped on a NaN
+  # currentPlaybackTime, so we own this Swift). Lives in-repo because the build
+  # pipeline re-runs `flutter create`, which would wipe anything under
+  # ios/Runner/. Needs NSAppleMusicUsageDescription.
+  system_music:
+    path: packages/system_music
+  # Locale-aware clock/date formatting for the live status bar.
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.14.1
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon/
+    - assets/
+    - assets/media/
+    - assets/fonts/
+    - assets/audio/
+
+flutter_launcher_icons:
+  image_path: "assets/icon/app_icon.png"
+  remove_alpha_ios: true
+  ios: true
+  android: true
+  min_sdk_android: 21

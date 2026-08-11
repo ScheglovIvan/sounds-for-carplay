@@ -1,0 +1,21 @@
+name: system_music
+description: >-
+  Reads and controls the iOS system music player
+  (MPMusicPlayerController.systemMusicPlayer): now-playing metadata plus
+  play / pause / skip for whatever the Music app is playing.
+version: 0.0.1
+publish_to: "none"
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  plugin:
+    platforms:
+      ios:
+        pluginClass: SystemMusicPlugin
